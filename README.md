@@ -52,6 +52,7 @@ True vs Pred: brought herself<br>
 True vs Pred: on .<br>
 
 **Collapse phase:** the model briefly overpredicts a frequent token to reduce loss:
+
 True vs Pred: It Fowler<br>
 True vs Pred: the Fowler<br>
 True vs Pred: make Fowler<br>
@@ -61,6 +62,7 @@ True vs Pred: its Fowler<br>
 True vs Pred: first Fowler<br>
 
 **Stabilization (a few epochs in):** diversity returns and guesses become plausible:
+
 True vs Pred: the certain<br>
 True vs Pred: close sides<br>
 True vs Pred: Red Portuguese<br>
@@ -71,6 +73,7 @@ True vs Pred: and island<br>
 True vs Pred: the the<br>
 
 **Later epochs (~50):** many masked tokens are predicted correctly:
+
 True vs Pred: . status<br>
 True vs Pred: into across<br>
 True vs Pred: A A<br>
