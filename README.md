@@ -1,8 +1,9 @@
 # Introduction
-This is a mini Transformer for **masked language modeling** (MLM) using self-attention. It’s not meant to be state-of-the-art—just a clean, from-scratch implementation to show familiarity with the architecture. I trained on Google Colab (GPU) and include simple attention visualizations on text snippets.
+This is a mini Transformer for **masked language modeling** (MLM) using self-attention. It’s not meant to be state-of-the-art, just a clean, from-scratch implementation to show familiarity with the architecture. I trained on Google Colab (GPU) and include simple attention visualizations on text snippets.
 
 ## Project structure
 
+```text
 mini-transformer/
 ├── src/
 │   ├── layers.py         # SelfAttention, positional encodings, FeedForward, etc.
@@ -15,6 +16,7 @@ mini-transformer/
 │   └── tokenizer.py      # Simple word-level tokenizer + vocab
 ├── plots/                # Saved training curves / comparisons
 └── README.md
+```
 
 ## Constraints, Bottlenecks & Lessons
 
@@ -44,39 +46,39 @@ I trained the model **with** and **without** dropout in `SelfAttention` (see `la
 
 **Early epochs (≈1):** predictions are essentially random:
 
-True vs Pred: while county
-True vs Pred: be people
-True vs Pred: brought herself
-True vs Pred: on .
+True vs Pred: while county<br>
+True vs Pred: be people<br>
+True vs Pred: brought herself<br>
+True vs Pred: on .<br>
 
 **Collapse phase:** the model briefly overpredicts a frequent token to reduce loss:
-True vs Pred: It Fowler
-True vs Pred: the Fowler
-True vs Pred: make Fowler
-True vs Pred: the Fowler
-True vs Pred: 2011 Fowler
-True vs Pred: its Fowler
-True vs Pred: first Fowler
+True vs Pred: It Fowler<br>
+True vs Pred: the Fowler<br>
+True vs Pred: make Fowler<br>
+True vs Pred: the Fowler<br>
+True vs Pred: 2011 Fowler<br>
+True vs Pred: its Fowler<br>
+True vs Pred: first Fowler<br>
 
 **Stabilization (a few epochs in):** diversity returns and guesses become plausible:
-True vs Pred: the certain
-True vs Pred: close sides
-True vs Pred: Red Portuguese
-True vs Pred: as wall
-True vs Pred: a education
-True vs Pred: complex mountain
-True vs Pred: and island
-True vs Pred: the the
+True vs Pred: the certain<br>
+True vs Pred: close sides<br>
+True vs Pred: Red Portuguese<br>
+True vs Pred: as wall<br>
+True vs Pred: a education<br>
+True vs Pred: complex mountain<br>
+True vs Pred: and island<br>
+True vs Pred: the the<br>
 
 **Later epochs (~50):** many masked tokens are predicted correctly:
-True vs Pred: . status
-True vs Pred: into across
-True vs Pred: A A
-True vs Pred: through across
-True vs Pred: reported reported
-True vs Pred: `(` was
-True vs Pred: made made
-True vs Pred: landfall landfall
+True vs Pred: . status<br>
+True vs Pred: into across<br>
+True vs Pred: A A<br>
+True vs Pred: through across<br>
+True vs Pred: reported reported<br>
+True vs Pred: `(` was<br>
+True vs Pred: made made<br>
+True vs Pred: landfall landfall<br>
 
 
 ### Curves
