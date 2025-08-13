@@ -1,0 +1,27 @@
+# Python caches
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+
+# Model artifacts / large binaries
+*.pt
+*.pth
+*.ckpt
+*.bin
+
+# Data (don’t commit datasets)
+data/raw/
+data/**/*.txt
+data/**/*.csv
+data/**/*.gz
+!data/**/*.py  
+
+# Logs & tmp
+logs/
+*.log
+tmp/
