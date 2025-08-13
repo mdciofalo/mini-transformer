@@ -113,3 +113,10 @@ Top-5: October 9.1%, February 5.5%, November 5.2%, 1994 4.2%, August 3.5%
 ![Example 4](plots/test_b1_i1_pos26_true-character_pred-few.png)  
 **TRUE:** `character` • **PRED:** `few` (9.1%)  
 Top-5: few 9.1%, positive 3.1%, critical 2.9%, major 2.2%, TV 2.1%
+
+## References
+- Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A., Kaiser, u., & Polosukhin, I. (2017). *Attention is All you Need*. NeurIPS.
+- Jacob Devlin, Ming-Wei Chang, Kenton Lee, & Kristina Toutanova. (2019). *BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding*.
+- Stephen Merity, Caiming Xiong, James Bradbury, & Richard Socher. (2016). *Pointer Sentinel Mixture Models*.
+- Peter Bloem. (2019). *Transformers from scratch*. https://peterbloem.nl/blog/transformers
+
